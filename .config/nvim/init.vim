@@ -5,9 +5,11 @@ endif
 inoremap jk <Esc>:w<Enter>
 inoremap <Esc> <NOP>
 
+nnoremap == ggvG=
+
 if has("nvim")
-  inoremap <ESC> <C-\><C-n>
-  tnoremap jk <C-\><C-n>
+    inoremap <ESC> <C-\><C-n>
+    tnoremap jk <C-\><C-n>
 endif
 
 filetype plugin indent on
@@ -39,6 +41,8 @@ set expandtab
 
 
 call plug#begin('~/.config/nvim/plugged')
+
+Plug 'dense-analysis/ale'
 
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 let g:deoplete#enable_at_startup = 1
