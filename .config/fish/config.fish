@@ -13,6 +13,7 @@ abbr fishrc "nvim ~/.config/fish/config.fish"
 abbr g "git"
 abbr src "source"
 abbr lss "ls -lah"
+alias config='/usr/bin/git --git-dir=$HOME/.myconf/ --work-tree=$HOME'
 
 function fish_prompt
 	set_color red --bold
