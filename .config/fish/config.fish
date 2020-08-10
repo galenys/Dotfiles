@@ -2,7 +2,6 @@ set PATH /usr/local/Cellar/mtr/0.87/sbin $PATH
 set fish_greeting
 
 source $HOME/.cargo/env
-export BROWSER=brave
 
 abbr brave "open -a 'Brave Browser'"
 abbr cdd "cd ~/AllFiles"
@@ -36,3 +35,4 @@ end
 
 set -xg PYTHONPATH /Users/shivbhatia/Library/Python/3.6 $PYTHONPATH
 
+export BROWSER=brave
