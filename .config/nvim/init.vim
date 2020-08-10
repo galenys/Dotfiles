@@ -68,4 +68,5 @@ call plug#end()
 
 colorscheme miramare
 
+set clipboard=unnamedplus
 
