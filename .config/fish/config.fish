@@ -12,6 +12,7 @@ abbr fishrc "nvim ~/.config/fish/config.fish"
 abbr g "git"
 abbr src "source"
 abbr lss "ls -lah"
+abbr tmux "tmux -u"
 alias config='/usr/bin/git --git-dir=$HOME/.myconf/ --work-tree=$HOME'
 
 function fish_prompt
@@ -35,4 +36,4 @@ end
 
 set -xg PYTHONPATH /Users/shivbhatia/Library/Python/3.6 $PYTHONPATH
 
-export BROWSER=brave
+export BROWSER=firefox
