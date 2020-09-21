@@ -43,6 +43,9 @@ set expandtab
 call plug#begin('~/.config/nvim/plugged')
 
 Plug 'dense-analysis/ale'
+let g:ale_linters = {
+    \   'haskell': ['stack-ghc', 'ghc-mod', 'hlint', 'hdevtools', 'hfmt'],
+    \}
 
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 let g:deoplete#enable_at_startup = 1
