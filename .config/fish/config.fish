@@ -13,6 +13,7 @@ abbr g "git"
 abbr src "source"
 abbr lss "ls -lah"
 abbr tmux "tmux -u"
+abbr lab "ssh -t sb3320@shell3.doc.ic.ac.uk /vol/linux/bin/sshtolab"
 alias config='/usr/bin/git --git-dir=$HOME/.myconf/ --work-tree=$HOME'
 
 function fish_prompt

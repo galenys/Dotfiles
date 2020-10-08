@@ -6,6 +6,7 @@ SETUVAR _fish_abbr_c:clear
 SETUVAR _fish_abbr_cdd:cd\x20\x7e/AllFiles
 SETUVAR _fish_abbr_fishrc:nvim\x20\x7e/\x2econfig/fish/config\x2efish
 SETUVAR _fish_abbr_g:git
+SETUVAR _fish_abbr_lab:ssh\x20\x2dt\x20sb3320\x40shell3\x2edoc\x2eic\x2eac\x2euk\x20/vol/linux/bin/sshtolab
 SETUVAR _fish_abbr_lss:ls\x20\x2dlah
 SETUVAR _fish_abbr_src:source
 SETUVAR _fish_abbr_tmux:tmux\x20\x2du
