@@ -38,3 +38,6 @@ end
 set -xg PYTHONPATH /Users/shivbhatia/Library/Python/3.6 $PYTHONPATH
 
 export BROWSER=firefox
+# ghcup-env
+set -q GHCUP_INSTALL_BASE_PREFIX[1]; or set GHCUP_INSTALL_BASE_PREFIX $HOME
+test -f /home/shivbhatia/.ghcup/env ; and set -gx PATH $HOME/.cabal/bin /home/shivbhatia/.ghcup/bin $PATH
