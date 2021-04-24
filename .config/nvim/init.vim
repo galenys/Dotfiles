@@ -47,8 +47,10 @@ let g:ale_linters = {
       \   'haskell': ['stack-ghc', 'ghc-mod', 'hlint', 'hdevtools', 'hfmt'],
       \}
 
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-let g:deoplete#enable_at_startup = 1
+" Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+" let g:deoplete#enable_at_startup = 1
+
+Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
 
 Plug 'scrooloose/nerdtree'
 map <C-e> :NERDTreeToggle<CR>
@@ -66,11 +68,6 @@ let g:miramare_disable_italic_comment = 1
 let g:miramare_transparent_background = 1
 
 Plug 'dag/vim-fish'
-
-Plug 'lervag/vimtex'
-let g:tex_flavor='latex'
-let g:vimtex_view_method='zathura'
-let g:vimtex_quickfix_mode=0
 
 Plug 'tpope/vim-commentary'
 
