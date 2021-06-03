@@ -1,4 +1,5 @@
 set PATH /usr/local/Cellar/mtr/0.87/sbin $PATH
+set PATH /home/shivbhatia/.local/share/gem/ruby/3.0.0/bin $PATH
 set fish_greeting
 
 source $HOME/.cargo/env
@@ -17,22 +18,22 @@ abbr lab "ssh -t sb3320@shell3.doc.ic.ac.uk /vol/linux/bin/sshtolab"
 alias config='/usr/bin/git --git-dir=$HOME/.myconf/ --work-tree=$HOME'
 
 function fish_prompt
-	set_color red --bold
-	printf "["
+  set_color red --bold
+  printf "["
 
-	set_color yellow
-	printf "%s" "$PWD"
-	
-	set_color magenta
-	printf "%s" (__fish_git_prompt)
-	
-	set_color red
-	printf "]" 
-	
-	set_color blue
-	printf "\n> "
-	
-	set_color normal
+  set_color yellow
+  printf "%s" "$PWD"
+
+  set_color magenta
+  printf "%s" (__fish_git_prompt)
+
+  set_color red
+  printf "]" 
+
+  set_color blue
+  printf "\n> "
+
+  set_color normal
 end
 
 set -xg PYTHONPATH /Users/shivbhatia/Library/Python/3.6 $PYTHONPATH
@@ -47,3 +48,18 @@ test -f /home/shivbhatia/.ghcup/env ; and set -gx PATH $HOME/.cabal/bin /home/sh
 eval /home/shivbhatia/anaconda3/bin/conda "shell.fish" "hook" $argv | source
 # <<< conda initialize <<<
 
+# Switch Ctrl and Caps Lock
+setxkbmap -option "ctrl:swapcaps"
+
+# START C Tools lectures
+set -x ARCH x86_64
+
+set -x TOOLDIR $HOME/c-tools
+set -x PATH $TOOLDIR/bin $TOOLDIR/bin/$ARCH $PATH
+
+if set -q MANPATH
+  set -x MANPATH $TOOLDIR/man
+else
+  set -x MANPATH $MANPATH $TOOLDIR/man
+end
+# END
