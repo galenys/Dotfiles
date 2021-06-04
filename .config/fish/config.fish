@@ -51,6 +51,9 @@ eval /home/shivbhatia/anaconda3/bin/conda "shell.fish" "hook" $argv | source
 # Switch Ctrl and Caps Lock
 setxkbmap -option "ctrl:swapcaps"
 
+# Something to make dmenu work
+set LC_CTYPE "en_GB.UTF-8 dmenu"
+
 # START C Tools lectures
 set -x ARCH x86_64
 
