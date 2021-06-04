@@ -18,6 +18,13 @@ local hotkeys_popup = require("awful.hotkeys_popup")
 -- when client with a matching name is opened:
 require("awful.hotkeys_popup.keys")
 
+
+-- MY WIDGETS
+local volume_widget = require('awesome-wm-widgets.volume-widget.volume')
+local battery_widget = require("awesome-wm-widgets.batteryarc-widget.batteryarc")
+local logout_menu_widget = require("awesome-wm-widgets.logout-menu-widget.logout-menu")
+local calendar_widget = require("awesome-wm-widgets.calendar-widget.calendar")
+
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
 -- another config (This code will only ever execute for the fallback config)
@@ -108,6 +115,17 @@ mykeyboardlayout = awful.widget.keyboardlayout()
 -- {{{ Wibar
 -- Create a textclock widget
 mytextclock = wibox.widget.textclock()
+
+-- Attach calendar_widget to mytextclock
+local cw = calendar_widget({
+  placement = 'bottom_right',
+  radius = 8
+})
+mytextclock:connect_signal("button::press", 
+    function(_, _, _, button)
+        if button == 1 then cw.toggle() end
+    end)
+
 
 -- Create a wibox for each screen and add it
 local taglist_buttons = gears.table.join(
@@ -203,14 +221,23 @@ awful.screen.connect_for_each_screen(function(s)
         layout = wibox.layout.align.horizontal,
         { -- Left widgets
             layout = wibox.layout.fixed.horizontal,
+            logout_menu_widget(),
             s.mytaglist,
             s.mypromptbox,
         },
         s.mytasklist, -- Middle widget
         { -- Right widgets
             layout = wibox.layout.fixed.horizontal,
-            wibox.widget.systray(),
+            volume_widget{
+              widget_type = 'icon_and_text'
+            },
             mytextclock,
+            battery_widget{
+              -- path_to_icons = '/usr/share/icons/Arc/status/symbolic/',
+              show_current_level = false,
+              arc_thickness = 2
+            },
+            wibox.widget.systray(),
         },
     }
 end)
@@ -234,6 +261,10 @@ globalkeys = gears.table.join(
               {description = "view next", group = "tag"}),
     awful.key({ modkey,           }, "Escape", awful.tag.history.restore,
               {description = "go back", group = "tag"}),
+
+    -- Volume Controls
+    awful.key({ modkey }, "]", function() volume_widget:inc() end),
+    awful.key({ modkey }, "[", function() volume_widget:dec() end),
 
     awful.key({ modkey,           }, "j",
         function ()
@@ -460,6 +491,7 @@ awful.rules.rules = {
           "DTA",  -- Firefox addon DownThemAll.
           "copyq",  -- Includes session name in class.
           "pinentry",
+          "conky"
         },
         class = {
           "Arandr",
@@ -522,4 +554,4 @@ end)
 awful.spawn.with_shell("nitrogen --restore --set-zoom-fill")
 
 -- Gaps
-beautiful.useless_gap = 5
+beautiful.useless_gap = 3
