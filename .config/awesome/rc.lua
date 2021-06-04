@@ -24,6 +24,7 @@ local volume_widget = require('awesome-wm-widgets.volume-widget.volume')
 local battery_widget = require("awesome-wm-widgets.batteryarc-widget.batteryarc")
 local logout_menu_widget = require("awesome-wm-widgets.logout-menu-widget.logout-menu")
 local calendar_widget = require("awesome-wm-widgets.calendar-widget.calendar")
+local brightness_widget = require("awesome-wm-widgets.brightness-widget.brightness")
 
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
@@ -265,6 +266,13 @@ globalkeys = gears.table.join(
     -- Volume Controls
     awful.key({ modkey }, "]", function() volume_widget:inc() end),
     awful.key({ modkey }, "[", function() volume_widget:dec() end),
+
+    -- Brightness Controls
+    awful.key({ modkey, "Shift" }, "]", function ()
+        awful.util.spawn("light -A 5") end),
+    awful.key({ modkey, "Shift" }, "[", function ()
+        awful.util.spawn("light -U 5") end),
+
 
     awful.key({ modkey,           }, "j",
         function ()
@@ -551,6 +559,7 @@ end)
 -- MY STUFF STARTS HERE
 
 -- Autostart Applications
+awful.spawn.with_shell("compton")
 awful.spawn.with_shell("nitrogen --restore --set-zoom-fill")
 
 -- Gaps
