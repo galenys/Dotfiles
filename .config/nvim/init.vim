@@ -16,6 +16,8 @@ filetype plugin indent on
 
 syntax on
 
+set linebreak
+
 set encoding=utf-8
 set clipboard=unnamedplus
 set number relativenumber
@@ -47,9 +49,6 @@ let g:ale_linters = {
       \   'haskell': ['stack-ghc', 'ghc-mod', 'hlint', 'hdevtools', 'hfmt'],
       \}
 
-" Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-" let g:deoplete#enable_at_startup = 1
-
 Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
 
 Plug 'scrooloose/nerdtree'
@@ -72,6 +71,17 @@ Plug 'dag/vim-fish'
 Plug 'tpope/vim-commentary'
 
 Plug 'dart-lang/dart-vim-plugin'
+
+Plug 'lervag/vimtex'
+let g:tex_flavor='latex'
+let g:vimtex_view_method='zathura'
+set conceallevel=0
+
+Plug 'sirver/ultisnips'
+let g:UltiSnipsExpandTrigger = '<tab>'
+let g:UltiSnipsJumpForwardTrigger = '<tab>'
+let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
+let g:UltiSnipsSnippetDirectories=["UltiSnips"]
 
 call plug#end()
 

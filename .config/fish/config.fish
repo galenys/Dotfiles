@@ -1,5 +1,6 @@
 set PATH /usr/local/Cellar/mtr/0.87/sbin $PATH
 set PATH /home/shivbhatia/.local/share/gem/ruby/3.0.0/bin $PATH
+set PATH /home/shivbhatia/spicetify-cli/ $PATH
 set fish_greeting
 
 source $HOME/.cargo/env
@@ -15,6 +16,7 @@ abbr src "source"
 abbr lss "ls -lah"
 abbr tmux "tmux -u"
 abbr lab "ssh -t sb3320@shell3.doc.ic.ac.uk /vol/linux/bin/sshtolab"
+abbr pserver "python3 -m http.server"
 alias config='/usr/bin/git --git-dir=$HOME/.myconf/ --work-tree=$HOME'
 
 function fish_prompt

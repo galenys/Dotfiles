@@ -26,6 +26,9 @@ local logout_menu_widget = require("awesome-wm-widgets.logout-menu-widget.logout
 local calendar_widget = require("awesome-wm-widgets.calendar-widget.calendar")
 local brightness_widget = require("awesome-wm-widgets.brightness-widget.brightness")
 
+-- REVELATION
+local revelation=require("revelation")
+
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
 -- another config (This code will only ever execute for the fallback config)
@@ -54,6 +57,9 @@ end
 -- {{{ Variable definitions
 -- Themes define colours, icons, font and wallpapers.
 beautiful.init(gears.filesystem.get_configuration_dir() .. "mytheme.lua")
+
+-- REVELATION INIT
+revelation.init()
 
 -- This is used later as the default terminal and editor to run.
 terminal = "alacritty"
@@ -273,6 +279,13 @@ globalkeys = gears.table.join(
     awful.key({ modkey, "Shift" }, "[", function ()
         awful.util.spawn("light -U 5") end),
 
+    -- Screen Locking Control
+    awful.key({ modkey }, "l", function ()
+        awful.util.spawn("i3lock -c 000000") end),
+    
+    -- Revelation Keybinding
+    awful.key({ modkey }, "q", revelation),
+
 
     awful.key({ modkey,           }, "j",
         function ()
@@ -347,7 +360,7 @@ globalkeys = gears.table.join(
               {description = "restore minimized", group = "client"}),
 
     -- Prompt
-    awful.key({ modkey },            "r",     function () awful.screen.focused().mypromptbox:run() end,
+    awful.key({ modkey },            "r",     function () awful.spawn.with_shell("rofi -show drun") end,
               {description = "run prompt", group = "launcher"}),
 
     awful.key({ modkey }, "x",
