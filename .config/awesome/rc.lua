@@ -18,6 +18,8 @@ local hotkeys_popup = require("awful.hotkeys_popup")
 -- when client with a matching name is opened:
 require("awful.hotkeys_popup.keys")
 
+-- Xrandr setup
+local xrandr = require("xrandr")
 
 -- MY WIDGETS
 local volume_widget = require('awesome-wm-widgets.volume-widget.volume')
@@ -286,6 +288,8 @@ globalkeys = gears.table.join(
     -- Revelation Keybinding
     awful.key({ modkey }, "q", revelation),
 
+    -- Xrandr Keybinding
+    awful.key({ modkey }, "b", function() xrandr.xrandr() end),
 
     awful.key({ modkey,           }, "j",
         function ()
@@ -576,4 +580,4 @@ awful.spawn.with_shell("compton")
 awful.spawn.with_shell("nitrogen --restore --set-zoom-fill")
 
 -- Gaps
-beautiful.useless_gap = 3
+beautiful.useless_gap = 0

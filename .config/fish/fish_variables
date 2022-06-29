@@ -1,6 +1,7 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
-SETUVAR __fish_initialized:3100
+SETUVAR __fish_initialized:3400
+SETUVAR _fish_abbr_basicvol:amixer\x20set\x20Master\x2045\x25
 SETUVAR _fish_abbr_brave:open\x20\x2da\x20\x27Brave\x20Browser\x27
 SETUVAR _fish_abbr_c:clear
 SETUVAR _fish_abbr_cdd:cd\x20\x7e/AllFiles
@@ -12,6 +13,7 @@ SETUVAR _fish_abbr_pserver:python3\x20\x2dm\x20http\x2eserver
 SETUVAR _fish_abbr_src:source
 SETUVAR _fish_abbr_tmux:tmux\x20\x2du
 SETUVAR _fish_abbr_v:nvim
+SETUVAR _fish_abbr_volreset:amixer\x20set\x20Master\x2045\x25
 SETUVAR _fish_abbr_vrc:nvim\x20\x7e/\x2econfig/nvim/init\x2evim
 SETUVAR fish_color_autosuggestion:FFC473
 SETUVAR fish_color_cancel:\x2dr
@@ -42,3 +44,4 @@ SETUVAR fish_pager_color_completion:normal
 SETUVAR fish_pager_color_description:B3A06D\x1eyellow
 SETUVAR fish_pager_color_prefix:white\x1e\x2d\x2dbold\x1e\x2d\x2dunderline
 SETUVAR fish_pager_color_progress:brwhite\x1e\x2d\x2dbackground\x3dcyan
+SETUVAR fish_pager_color_selected_background:\x2dr
