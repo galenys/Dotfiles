@@ -22,6 +22,10 @@ abbr pserver "python3 -m http.server"
 alias config='/usr/bin/git --git-dir=$HOME/.myconf/ --work-tree=$HOME'
 alias sicstus='rlwrap ~/sicstus/bin/sicstus'
 
+function cppcompile 
+  g++ -std=c++11 -O2 -Wall $argv
+end
+
 function fish_prompt
   set_color red --bold
   printf "["
@@ -92,3 +96,4 @@ end
 test -s "$HOME/.config/envman/load.fish"; and source "$HOME/.config/envman/load.fish"
 
 zoxide init fish | source
+fish_add_path /home/shivbhatia/.spicetify
