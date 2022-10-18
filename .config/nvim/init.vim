@@ -2,8 +2,8 @@ if &shell =~# 'fish$'
   set shell=sh
 endif
 
-inoremap jk <Esc>:w<Enter>
-inoremap <Esc> <NOP>
+imap jk <Esc>:w<Enter>
+imap <Esc> <NOP>
 
 nnoremap == ggvG=
 

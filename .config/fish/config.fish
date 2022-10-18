@@ -30,7 +30,7 @@ function fish_prompt
   set_color red --bold
   printf "["
 
-  set_color yellow
+  set_color green
   printf "%s" "$PWD"
 
   set_color magenta
