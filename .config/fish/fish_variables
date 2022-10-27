@@ -45,4 +45,4 @@ SETUVAR fish_pager_color_description:B3A06D\x1eyellow
 SETUVAR fish_pager_color_prefix:white\x1e\x2d\x2dbold\x1e\x2d\x2dunderline
 SETUVAR fish_pager_color_progress:brwhite\x1e\x2d\x2dbackground\x3dcyan
 SETUVAR fish_pager_color_selected_background:\x2dr
-SETUVAR fish_user_paths:/home/shivbhatia/AllFiles/dev/processing\x2d4\x2e0\x2e1\x1e/home/shivbhatia/\x2espicetify
+SETUVAR fish_user_paths:/home/shivbhatia/\x2elocal/share/solana/install/active_release/bin\x1e/home/shivbhatia/AllFiles/dev/processing\x2d4\x2e0\x2e1\x1e/home/shivbhatia/\x2espicetify

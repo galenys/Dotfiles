@@ -52,11 +52,6 @@ export BROWSER=firefox
 set -q GHCUP_INSTALL_BASE_PREFIX[1]; or set GHCUP_INSTALL_BASE_PREFIX $HOME
 test -f /home/shivbhatia/.ghcup/env ; and set -gx PATH $HOME/.cabal/bin /home/shivbhatia/.ghcup/bin $PATH
 
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-eval /home/shivbhatia/anaconda3/bin/conda "shell.fish" "hook" $argv | source
-# <<< conda initialize <<<
-
 # Switch Ctrl and Caps Lock
 setxkbmap -option "ctrl:swapcaps"
 
