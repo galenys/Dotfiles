@@ -1,4 +1,12 @@
 require('plugins')
+require('lsp')
+
+vim.keymap.set('i', 'jk', [[<Esc>:w<Enter>"]])
+
+vim.diagnostic.config({
+  virtual_text = true
+})
+vim.diagnostic.open_float = true
 
 vim.opt.linebreak = true
 vim.opt.encoding = "utf-8"
@@ -13,7 +21,6 @@ vim.o.tabstop = 2
 vim.o.shiftwidth = 2
 vim.o.expandtab = true
 
-vim.keymap.set('i', 'jk', [[<C-\><C-n>]])
 vim.keymap.set('i', '"', [[""<left>]])
 vim.keymap.set('i', '[', "[]<left>")
 vim.keymap.set('i', '(', "()<left>")
@@ -22,4 +29,3 @@ vim.keymap.set('i', '{', "{}<left>")
 vim.cmd([[
   filetype plugin indent on
 ]])
-

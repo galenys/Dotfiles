@@ -2,6 +2,24 @@ local Plug = vim.fn['plug#']
 
 vim.call('plug#begin', '~/.config/nvim/plugged')
 
+-- LSP Support
+Plug 'neovim/nvim-lspconfig'
+Plug 'williamboman/mason.nvim'
+Plug 'williamboman/mason-lspconfig.nvim'
+
+Plug 'hrsh7th/nvim-cmp'
+Plug 'hrsh7th/cmp-buffer'
+Plug 'hrsh7th/cmp-path'
+Plug 'saadparwaiz1/cmp_luasnip'
+Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'hrsh7th/cmp-nvim-lua'
+
+Plug 'L3MON4D3/LuaSnip'
+Plug 'rafamadriz/friendly-snippets'
+
+Plug 'VonHeikemen/lsp-zero.nvim'
+-- End
+
 Plug('scrooloose/nerdtree', {on = 'NERDTreeToggle'})
 vim.keymap.set("n", "<C-n>", ":NERDTreeToggle<CR>")
 
@@ -25,7 +43,9 @@ Plug 'sirver/ultisnips'
 vim.g.UltiSnipsExpandTrigger = '<tab>'
 vim.g.UltiSnipsJumpForwardTrigger = '<tab>'
 vim.g.UltiSnipsJumpBackwardTrigger = '<s-tab>'
--- vim.g.UltiSnipsSnippetDirectories=["UltiSnips"]
+vim.cmd([[
+  let g:UltiSnipsSnippetDirectories=["UltiSnips"]
+]])
 
 vim.call('plug#end')
 
