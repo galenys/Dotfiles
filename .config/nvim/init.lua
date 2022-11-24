@@ -1,6 +1,7 @@
 require('plugins')
 require('lsp')
 require('barbar-config')
+require('telescope').load_extension('fzf')
 
 vim.keymap.set('i', 'jk', [[<Esc>:w<Enter>]])
 

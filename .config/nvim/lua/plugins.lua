@@ -18,6 +18,7 @@ Plug 'L3MON4D3/LuaSnip'
 Plug 'rafamadriz/friendly-snippets'
 
 Plug 'VonHeikemen/lsp-zero.nvim'
+-- End
 
 Plug 'tpope/vim-fugitive'
 
@@ -25,7 +26,14 @@ Plug 'airblade/vim-gitgutter'
 
 Plug 'nvim-tree/nvim-web-devicons'
 Plug 'romgrk/barbar.nvim'
--- End
+
+Plug 'nvim-lua/plenary.nvim'
+Plug ('nvim-telescope/telescope.nvim', {tag = '0.1.0'})
+vim.keymap.set('n', '<C-f>', ":Telescope find_files<CR>")
+
+vim.cmd([[
+Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
+]])
 
 Plug('scrooloose/nerdtree', {on = 'NERDTreeToggle'})
 vim.keymap.set("n", "<C-n>", ":NERDTreeToggle<CR>")
