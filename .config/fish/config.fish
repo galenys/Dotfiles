@@ -1,7 +1,9 @@
 set PATH /usr/local/Cellar/mtr/0.87/sbin $PATH
 set PATH /home/shivbhatia/.local/share/gem/ruby/3.0.0/bin $PATH
 set PATH /home/shivbhatia/spicetify-cli/ $PATH
-set PATH /home/shivbhatia/AllFiles/university/year_2/cs/c/pintos_task0_sb3320/src/utils $PATH
+set ANDROID_SDK_ROOT $HOME/Library/Android/Sdk
+set PATH $ANDROID_SDK_ROOT/emulator $PATH
+set PATH $ANDROID_SDK_ROOT/platform-tools $PATH
 set fish_greeting
 
 source $HOME/.cargo/env
