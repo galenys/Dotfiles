@@ -20,6 +20,10 @@ Plug 'rafamadriz/friendly-snippets'
 Plug 'VonHeikemen/lsp-zero.nvim'
 -- End
 
+Plug 'matze/vim-move'
+
+Plug 'tpope/vim-surround'
+
 Plug 'tpope/vim-fugitive'
 
 Plug 'airblade/vim-gitgutter'
@@ -30,6 +34,7 @@ Plug 'romgrk/barbar.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug ('nvim-telescope/telescope.nvim', {tag = '0.1.0'})
 vim.keymap.set('n', '<C-f>', ":Telescope find_files<CR>")
+vim.keymap.set('n', '<C-b>', ":Telescope buffers<CR>")
 
 vim.cmd([[
 Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
@@ -49,8 +54,6 @@ vim.opt.termguicolors = true
 vim.g.miramare_enable_italic = 1
 vim.g.miramare_disable_italic_comment = 1
 vim.g.miramare_transparent_background = 1
-
-Plug 'dag/vim-fish'
 
 Plug 'tpope/vim-commentary'
 
