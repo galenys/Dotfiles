@@ -31,10 +31,12 @@ Plug 'airblade/vim-gitgutter'
 Plug 'nvim-tree/nvim-web-devicons'
 Plug 'romgrk/barbar.nvim'
 
+Plug 'jiangmiao/auto-pairs'
+
 Plug 'nvim-lua/plenary.nvim'
 Plug ('nvim-telescope/telescope.nvim', {tag = '0.1.0'})
-vim.keymap.set('n', '<C-f>', ":Telescope find_files<CR>")
-vim.keymap.set('n', '<C-b>', ":Telescope buffers<CR>")
+vim.keymap.set("n", "<C-f>", ":Telescope find_files hidden=true<CR>")
+vim.keymap.set("n", "<C-b>", ":Telescope live_grep<CR>")
 
 vim.cmd([[
 Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
@@ -51,11 +53,14 @@ vim.g.rainbow_active = 1
 
 Plug 'franbach/miramare'
 vim.opt.termguicolors = true
-vim.g.miramare_enable_italic = 1
-vim.g.miramare_disable_italic_comment = 1
-vim.g.miramare_transparent_background = 1
+
+Plug 'xiyaowong/nvim-transparent'
 
 Plug 'tpope/vim-commentary'
+
+Plug 'eandrju/cellular-automaton.nvim'
+
+Plug 'ggandor/leap.nvim'
 
 Plug 'sirver/ultisnips'
 vim.g.UltiSnipsExpandTrigger = '<tab>'
@@ -63,6 +68,10 @@ vim.g.UltiSnipsJumpForwardTrigger = '<tab>'
 vim.g.UltiSnipsJumpBackwardTrigger = '<s-tab>'
 vim.cmd([[
 let g:UltiSnipsSnippetDirectories=["UltiSnips"]
+]])
+
+vim.cmd([[
+  Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 ]])
 
 vim.call('plug#end')

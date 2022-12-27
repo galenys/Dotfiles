@@ -44,7 +44,7 @@ function fish_prompt
   set_color blue
   printf "\n> "
 
-  set_color normal
+#  set_color normal
 end
 
 set -xg PYTHONPATH /Users/shivbhatia/Library/Python/3.6 $PYTHONPATH
@@ -94,3 +94,8 @@ test -s "$HOME/.config/envman/load.fish"; and source "$HOME/.config/envman/load.
 
 zoxide init fish | source
 fish_add_path /home/shivbhatia/.spicetify
+
+# opam configuration
+source /home/shivbhatia/.opam/opam-init/init.fish > /dev/null 2> /dev/null; or true
+
+[ -f /usr/share/autojump/autojump.fish ]; and source /usr/share/autojump/autojump.fish
