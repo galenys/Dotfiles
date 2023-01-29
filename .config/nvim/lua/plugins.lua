@@ -28,10 +28,14 @@ Plug 'tpope/vim-fugitive'
 
 Plug 'airblade/vim-gitgutter'
 
+Plug 'github/copilot.vim'
+
 Plug 'nvim-tree/nvim-web-devicons'
 Plug 'romgrk/barbar.nvim'
 
 Plug 'jiangmiao/auto-pairs'
+
+Plug 'simrat39/symbols-outline.nvim'
 
 Plug 'nvim-lua/plenary.nvim'
 Plug ('nvim-telescope/telescope.nvim', {tag = '0.1.0'})
@@ -53,6 +57,9 @@ vim.g.rainbow_active = 1
 
 Plug 'franbach/miramare'
 vim.opt.termguicolors = true
+
+-- TODO: set this up
+-- Plug 'nvim-colortils/colortils.nvim'
 
 Plug 'xiyaowong/nvim-transparent'
 

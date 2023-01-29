@@ -580,6 +580,6 @@ awful.spawn.with_shell("compton")
 awful.spawn.with_shell("nitrogen --restore --set-zoom-fill")
 
 -- Gaps
-beautiful.useless_gap = 0
+beautiful.useless_gap = 5
 
 gears.timer.start_new(10, function() collectgarbage("step", 20000) return true end)
