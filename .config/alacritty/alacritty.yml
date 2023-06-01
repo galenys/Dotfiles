@@ -1,6 +1,6 @@
 # Colors (Monokai Pro)
 window:
-  opacity: 0.85
+  opacity: 1
 colors:
   # Default colors
   primary:
