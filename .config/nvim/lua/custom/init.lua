@@ -6,5 +6,4 @@
 --   command = "tabdo wincmd =",
 -- })
 
-vim.opt.scrolloff = 99
-
+vim.opt.linebreak = true

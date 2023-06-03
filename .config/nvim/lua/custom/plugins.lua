@@ -27,7 +27,6 @@ local plugins = {
     "williamboman/mason.nvim",
     opts = overrides.mason
   },
-
   {
     "nvim-treesitter/nvim-treesitter",
     opts = overrides.treesitter,
@@ -53,12 +52,19 @@ local plugins = {
   -- Movement
   {
     "matze/vim-move",
-    -- lazy = false,
+    lazy = false,
   },
 
   -- Copilot
-  "github/copilot.vim",
-  "zbirenbaum/copilot-cmp",
+  {
+    "github/copilot.vim",
+    lazy = false,
+  },
+  {
+   "zbirenbaum/copilot-cmp",
+    lazy = false,
+  },
+
 
   -- Debugging
   {
@@ -69,6 +75,16 @@ local plugins = {
     "rcarriga/nvim-dap-ui",
     lazy = false,
   },
+
+
+  -- Center vertically (breaks mouse scrolling)
+  {
+    "arnamak/stay-centered.nvim",
+    config = function ()
+      require("stay-centered").setup()
+    end,
+    lazy = false,
+  }
 
   -- To make a plugin not be loaded
   -- {

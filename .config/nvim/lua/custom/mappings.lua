@@ -3,7 +3,7 @@ local M = {}
 
 -- M.general = {
 --   n = {
---     [";"] = { ":", "enter command mode", opts = { nowait = true } },
+--     ["G"] = { "Gzz", "center vertically when jumping to the end of a file", opts = { nowait = true } },
 --   },
 -- }
 
