@@ -84,7 +84,12 @@ local plugins = {
       require("stay-centered").setup()
     end,
     lazy = false,
-  }
+  },
+
+  {
+    "Pocco81/auto-save.nvim",
+    lazy = false,
+  },
 
   -- To make a plugin not be loaded
   -- {
