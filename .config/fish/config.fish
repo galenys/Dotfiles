@@ -4,6 +4,11 @@ set PATH /home/shivbhatia/spicetify-cli/ $PATH
 set ANDROID_SDK_ROOT $HOME/Library/Android/Sdk
 set PATH $ANDROID_SDK_ROOT/emulator $PATH
 set PATH $ANDROID_SDK_ROOT/platform-tools $PATH
+set ANDROID_HOME $HOME/Android/Sdk/
+set PATH $ANDROID_HOME/tools $PATH
+set PATH $ANDROID_HOME/emulator $PATH
+set PATH $ANDROID_HOME/tools/bin $PATH
+set PATH $ANDROID_HOME/platform-tools $PATH
 set fish_greeting
 
 source $HOME/.cargo/env
